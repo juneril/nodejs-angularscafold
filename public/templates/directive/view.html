@@ -1,0 +1,49 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <h3 class="modal-title">Upload File</h3>
+    </div>
+    <div class="modal-body">
+        <form name="formCustomer">
+            <div class="col-lg-6 col-md-6">
+                <div class="form-group">
+                    <label for="inputName">First Name</label>
+                    <input ng-model ="CustomerDetails.FirstName" type="text" class="form-control" id="docType" ng-disabled="isDisable" value="">
+                </div>
+                <div class="form-group">
+                    <label for="inputSlug">Last Name</label>
+                    <input ng-model ="CustomerDetails.LastName" type="text" class="form-control" id="docName" ng-disabled="isDisable" >
+                </div>
+                <div class="form-group">
+                    <label for="inputSlug">Address</label>
+                    <input ng-model ="CustomerDetails.Address" type="text" class="form-control" id="docName" ng-disabled="isDisable" >
+                </div>
+                <div class="form-group">
+                    <label for="inputSlug">Contact Number</label>
+                    <input ng-model = "CustomerDetails.ContactNumber" type="text" class="form-control" id="docName" ng-disabled="isDisable" >
+                </div>
+                <div class="form-group">
+                    <label for="inputSlug">Email</label>
+                    <input ng-model= "CustomerDetails.Email" type="text" class="form-control" id="docName" ng-disabled="isDisable" >
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="text-center picture-style"> <img src="{{CustomerDetails.Picture}}" class="img-rounded" width="144" height="144">
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary" ngf-select ngf-change="uploadFile($files)" ngf-accept="'.jpeg,.jpg,.png'">Browse</button>
+                    <button type="button" class="btn btn-primary" ng-click="uploadStart()"  >Upload</button>
+                     <progressbar ng-show="progressPercentage > 0" animate="false" value="progressPercentage" type="success"><b>{{progressPercentage}}%</b></progressbar>
+                     <p ng-hide="fileselection!=1" class="validation-invalid">Select file with correct format for picture</p>
+                </div>
+            </div>
+        </form>
+       
+        <div class="col-md-12">
+            <div class="text-right">
+                <button type="button" class="btn btn-warning " ng-click="updatecustomer()">Save</button     >
+                <button type="button" class="btn btn-warning " ng-click="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer"></div>
+</div>
