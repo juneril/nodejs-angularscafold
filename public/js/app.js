@@ -9,7 +9,6 @@ angular.module('nodejsscafold', [
             .state('home', {
                 url: '/home',
                 templateUrl: 'public/templates/index.html',
-                 controller: 'loginCtrl'
             })
             .state('customer', {
                 url: '/home/customer',

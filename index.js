@@ -27,5 +27,6 @@ require(application.config + 'express')(app, passport, config);
 
 
 require(application.routes + 'costumer')(app,config);
+require(application.routes + 'useraccount')(app,config);
 require(application.routes + '/')(app);
 module.exports = app;
